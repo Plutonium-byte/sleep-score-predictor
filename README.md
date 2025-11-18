@@ -106,7 +106,7 @@ Lower RMSE values indicate better model performance.
 
 ---
 
-## 🚀 How to Run
+## 🚀 Local Deployment
 
 ### 1. **Set up the environment with uv**
 
@@ -136,6 +136,33 @@ docker run -it -p 9696:9696 sleep-predictor
 ```bash
 python serve.py
 ```
+
+## ☁️ Cloud Deployment (Hugging Face)
+
+The model is deployed entirely in the cloud using **Hugging Face Spaces**.
+
+### 1. Create a New Space
+
+* Go to: [https://huggingface.co/spaces](https://huggingface.co/spaces)
+* Choose:
+
+  * **SDK:** `Gradio`
+  * **Hardware:** CPU
+* Create the Space
+
+### 2. Run `train.py` to generate the model.
+
+### 3. Upload Files
+
+Upload the following:
+
+```
+app.py
+model.bin
+requirements.txt
+```
+
+### 4. Space will auto-launch your application.
 
 ---
 
